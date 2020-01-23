@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+	int a = 0;
+	int b = 1;
+
+	printf("a : 0 / b : 1\n");
+	printf("&& 결과값  : %d\n", a && b);//And연산- 피연산, 연산함수 모두 True반환시 성립.
+	printf("|| 결과값  : %d\n", a || b);//Or연산- 피연산, 연산함수 둘중 하나라도 True반환시 성립.
+	printf("!a 결과값  : %d\n", !a);//Not연산- 성립된 논리 역으로 바꿈. (True = False, False = True)
+	printf("!b 결과값  : %d\n", !b);//Not연산- 성립된 논리 역으로 바꿈. (True = False, False = True)
+
+	return 0;
+}
