@@ -1,0 +1,11 @@
+#include <stdio.h> // Standard Input&Output.header
+
+int main() // INT = 4 byte -2,147,483,648 ~ 2,147,483,647범위
+            // 다른 예시로 Int type으로는  char, long, short등이 있다.
+            // 실수형 Float Type으로는 float, double등.
+{
+
+printf("Hello world!"); //printf- 출력
+
+return 12345; // int형 반환.
+}
