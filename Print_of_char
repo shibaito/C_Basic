@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main()
+{
+	char name = 99; // 아스키 코드에서 99 = C
+	printf("%c", name); //%c=char, name
+
+	return 0;
+}
