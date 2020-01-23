@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    scanf_s("%d", &num); // scanf_s = 사용자가 입력것한을 받아옴.
+    printf("\n"); // 역슬래시 + n은 한줄 띄어쓰기.
+    printf("%d", num);
+    return 0;
+}
