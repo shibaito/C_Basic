@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main()
+{
+	char c = 'c';
+	printf("%d", c); //%d= 부호있는 10진 정수.
+	return 0;
+}
