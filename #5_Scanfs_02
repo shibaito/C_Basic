@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main()
+{
+    float num; //실수 float, 이름 num 
+    scanf_s("%f", &num); //scanf_s로 float값 받아오기, num
+    printf("\n"); //줄바꿈
+    printf("%.3f", num); //%.(숫자)f 는 .숫자만큼의 소숫점자리까지 표시함.
+    return 0;
+}
