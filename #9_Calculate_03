@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+	//할당연산
+	int num = 10;
+	printf("Current Num : %d\n", num);//num = 10
+	num += 5;
+	printf("num += 5 : %d\n", num);//num에 +=5, 5를더한다.
+
+	num -= 5;
+	printf("num -= 5 : %d\n", num);//num에 -=5, 5를뺀다.
+
+	num *= 5;
+	printf("num *= 5 : %d\n", num);//num에 *=5, 5를 곱한다.
+
+	num /= 5;
+	printf("num /= 5 : %d\n", num);//num에 /=5, 5로 나눈다.
+
+	num %= 5;
+	printf("num %%= 5 : %d\n", num);//num에 %=5, 나눔나머지
+	return 0;
+}
