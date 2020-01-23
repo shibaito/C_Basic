@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main()
+{
+	//값을 입력 받아 나의 이니셜 OO 생일 OO월 OO일, 왼쪽 시력 OO.OO 오른쪽 시력 OO.OO 출력
+	char fin;
+	char min;
+	char lin;
+
+	printf("당신의 첫번째 영어 이니셜을 입력하여주십시오.\n");
+	scanf_s(" %c", &fin);
+	printf("당신의 두번째 영어 이니셜을 입력하여주십시오.\n");
+	scanf_s(" %c", &min);
+	printf("당신의 세번째 영어 이니셜을 입력하여주십시오.\n");
+	scanf_s(" %c", &lin);
+	
+	printf("당신의 이니셜은 %c%c%c 입니다.\n", fin, min, lin);
+
+	int month;
+	int day;
+
+	printf("당신이 태어난 달을 입력하여 주십시오.\n");
+	scanf_s(" %d", &month);
+	printf("당신이 태어난 일을 입력하여 주십시오.\n");
+	scanf_s(" %d", &day);
+	
+	printf("당신이 태어난 생년월일은 %d월 %d일 입니다.\n", month, day);
+
+	float leye;
+	float reye;
+
+	printf("당신의 왼쪽 눈 시력을 입력하여 주십시오.\n");
+	scanf_s(" %f", &leye);
+	printf("당신의 오른쪽 눈 시력을 입력하여 주십시오.\n");
+	scanf_s(" %f", &reye);
+
+	printf("당신의 시력은 왼쪽 눈:%.1f 오른쪽 눈:%.1f 입니다.\n", leye, reye);
+
+	printf("%c%c%c님의 생년월일은 %d월%d일입니다. 당신의 시력은 왼쪽%.1f, 오른쪽%.1f입니다.\n", fin, min, lin, month, day, leye, reye);
+
+	return 0;
+}
