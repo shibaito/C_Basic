@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+	int a, b;
+	printf("두 수를 입력하세요.\n");
+	scanf_s("%d%d", &a, &b);
+
+	//사칙연산
+	int addresult = a + b;
+	int subresult = a - b;
+	int mtpresult = a * b;
+	int divresult = a / b;
+	int remresult = a % b;
+
+	printf(" 두 수의 합은 %d입니다.\n", addresult);
+	printf(" 두 수의 뺄셈은 %d입니다.\n", subresult);
+	printf(" 두 수의 곱은 %d입니다.\n", mtpresult);
+	printf(" 두 수의 나눔은 %d입니다.\n", divresult);
+	printf(" 두 수의 나머지는 %d입니다.\n", remresult);
+
+	return 0;
+}
