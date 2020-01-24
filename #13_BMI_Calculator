@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+	float kg;
+	float m;
+
+	printf("당신의 몸무게를 입력하여 주십시오(Kg)\n");
+	scanf_s("%f", &kg);
+	printf("당신의 키를 입력하여 주십시오(미터)\n");
+	scanf_s("%f", &m);
+
+	printf("당신의 키는 %.2fm이며, 당신의 몸무게는 %.1fKg입니다.\n", m, kg);
+
+	float BMI = kg / (m*m);
+
+	printf("당신의 BMI 지수는 %.1f입니다.", BMI);
+
+	return 0;
+}
