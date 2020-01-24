@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <Windows.h>
+#include <time.h>
+
+//설명x
+
+int main()
+{
+    srand((unsigned)time(NULL));
+
+    int randn = rand() %100 + 11 ;
+    printf("랜덤숫자는 %d입니다.", randn);
+    
+    return 0;
+
+}
