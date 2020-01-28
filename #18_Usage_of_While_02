@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <Windows.h>
+
+int main()
+{
+	while (true)
+	{
+		system("cls"); //화면 클리어
+		printf("원하시는 단을 입력해 주십시오.\n");
+		int num;
+		scanf_s("%d", &num);
+
+		if (num == 0) //num 값이 0일때는 break. 탈출
+		{
+			break;
+		}
+		else if (num < 1 || num > 9) // 만약 1보다 작거나 9보다 큰값일때는 다시입력.
+		{
+			printf("다시 입력하여 주십시오 (1부터 9사이의 값.\n");
+			Sleep(1000);//다시입력문구 1초간 홀드후 위의 sys cls로 클리어.
+			continue;// while문의 시작으로 되돌아감.
+		}
+		for (int i = 1; i <= 9; i++)//i값임. 입력받은수에 곱할 수 1부터 9까지 1씩증가할때까지 반복.
+		{
+			printf("%d X %d = %d\n", num, i, num * i);
+		}
+		Sleep(1000);
+	}
+	return 0;
+}
