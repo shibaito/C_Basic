@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int num = 0
+
+    while (num < 10) //괄호 안 반복조건.
+    {
+        printf("Hello World!\n");//괄호 안에서 반복할내용.
+        num ++;//0값인 num값을 9가 될때까지 1씩 증가시킴.
+    }
+
+    return 0;
+}
