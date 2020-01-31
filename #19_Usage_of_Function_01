@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <Windows.h>
+
+int Add(int i, int j); //여기서 반환해도 인식X. 밑으로내림.
+int Sub(int i, int j);
+int Mul(int i, int j);
+int Div(int i, int j);
+int Exit();
+
+int main()
+{
+	int play = 1;
+
+	while (play) // int 값 play가 1, true일때 
+	{
+		system("cls"); // clean screen
+
+		int a, b;
+		printf("두 수를 입력해주세요.\n");
+		scanf_s("%d%d", &a, &b);
+		int input;
+			printf("1-더하기 / 2-빼기 / 3-곱하기 / 4-나누기 / 0-나가기/\n");
+		scanf_s("%d", &input);
+
+		switch (input) //입력 된 input값에 대한 switch문.
+		{
+		case 0: // input 값 0일때는
+			play = Exit(); //맨 밑에서 정의한 함수 Exit.
+			break;
+		case 1:
+			printf("%d + %d = %d\n", a, b, Add(a, b));
+			break;
+		case 2:
+			printf("%d - %d = %d\n", a, b, Sub(a, b));
+			break;
+		case 3:
+			printf("%d X %d = %d\n", a, b, Mul(a, b));
+			break;
+		case 4:
+			printf("%d / %d = %d\n", a, b, Div(a, b));
+			break;
+		default:
+			break;
+		}
+		
+		Sleep(2000); //슬립2초
+	}
+}
+
+int Add(int i, int j) // Add는 i와 j값을 더하는것을 선언 및 반환.
+{
+	return i + j;
+}
+int Sub(int i, int j)
+{
+	return i - j;
+}
+int Mul(int i, int j)
+{
+	return i * j;
+}
+int Div(int i, int j)
+{
+	return i / j;
+}
+int Exit()
+{
+	printf("정말로 나가시겠습니까? (Y / N)\n");
+	char input;
+	scanf_s(" %c", &input);
+	switch (input)
+	{
+	case 'Y':
+	case 'y':
+		return 0;
+		break;
+	case 'N':
+	case 'n':
+		return 1;
+		break;
+	default:
+		break;
+	}
+	return 1;
+}
