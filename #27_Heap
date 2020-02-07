@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <malloc.h> //malloc사용을위한 헤더.
+
+int main()
+{
+	int* pNum = (int*)malloc(sizeof(int));
+	*pNum = 10;
+	printf("%d\n", *pNum);
+	free(pNum); //pNum 해방시키기. 날리기.
+	printf("%d\n", *pNum); // pNum을 해방시킴으로 출력값은 쓰레기값.
+	return 0;
+}
