@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+	int num = 10; //정수 num 은 10
+	int* pNum; //정수*(포인터) 이름 pNum
+	pNum = &num; // pNum은 num의 주소값
+
+	printf ("num = %d\n", num);
+	printf ("num주소값 = %p \n", &num);
+	printf("pNum = %p \n", pNum); //포인터 주소값 출력시 %p
+	printf("pNum주소값 = %p \n", &pNum);
+
+	return 0;
+}
