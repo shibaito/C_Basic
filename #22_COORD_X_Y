@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <Windows.h>
+
+int main()
+{
+	COORD pos; 
+	pos.X = 10; //커서위치 X값 +10칸
+	pos.Y = 10; //커서위치 Y값 +10칸
+
+	while (true)
+	{
+		system("cls");
+		pos.X++;  //커서 X값 1칸씩증가 While로 반복.
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos); //콘솔커서위치값 COORD pos값으로. 
+		printf("옷");
+		Sleep(1000);
+	}
+
+	return 0;
+}
