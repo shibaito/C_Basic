@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <Windows.h>
+#include <time.h>
+
+typedef struct Obj //구조체 Obj
+{
+	int x; //정수 x,y 값과 shape라는 이름의 문자를 넣음.
+	int y;
+	const char* shape;
+}Player, Poo;
+
+void SetCursorPosition(int x, int y);
+
+int main()
+{
+	srand((unsigned)time(NULL));
+
+	Player player;
+	player.x = 10;
+	player.y = 30;
+	player.shape = "옷"; // 플레이어 기본 좌표값 10x 30y 플레이어모델은 '옷'
+
+	Poo poo;
+	poo.x = rand() % 50; //똥의 X좌표값 50칸중 랜덤
+	poo.y = 0;
+	poo.shape = "♨";
+
+	while (true)
+	{
+		system("cls");
+
+		if (GetAsyncKeyState(VK_LEFT)) //좌측방향키로 x값 감소
+		{
+			player.x--;
+		}
+
+		if (GetAsyncKeyState(VK_RIGHT))
+		{
+			player.x++;
+		}
+
+		poo.y++;
+
+		if (poo.y > 30)
+		{
+			poo.x = rand() % 50;
+			poo.y = 0;
+		}
+
+		if (poo.x == player.x && poo.y == player.y)
+		{
+			break; //만약 똥의 xy값과 플레이어의 xy값이 같아지면 게임끝.
+		}
+
+		SetCursorPosition(poo.x, poo.y);
+		printf(poo.shape);
+
+		SetCursorPosition(player.x, player.y);
+		printf(player.shape);
+
+		Sleep(50);
+	}
+	return 0;
+}
+
+void SetCursorPosition(int x, int y)
+{
+	COORD pos;
+	pos.X = x * 2;
+	pos.Y = y;
+
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+}
