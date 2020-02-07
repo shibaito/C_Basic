@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+struct Player //Player라는 구조체.
+{
+	char name[20]; //max 20자
+	int lv; //자료형_이름, 사용은 구조체이름.자료형이름 = 값 
+	float hp;
+	float mp;
+};
+
+int main()
+{
+	Player player; //구조체 Player 정의
+	printf("플레이어의 이름을 입력해주세요.\n");
+	scanf_s("%s", &player.name, sizeof(player.name)); 
+	player.lv = 10;
+	player.hp = 100.1;
+	player.mp = 100.1;
+
+	printf("Player Name : %s \n", player.name);
+	printf("Lv : %d \n", player.lv);
+	printf("HP : %.1f \n", player.hp);
+	printf("MP : %.1f \n", player.mp);
+
+	return 0;
+}
