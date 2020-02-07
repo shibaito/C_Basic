@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <Windows.h>
+
+// #define의 극단적인 예시.
+// #define_이름_정의를 이용한 한글로만든 구구단코딩
+
+#define 정수 int
+#define 실수 float
+#define 문자 char
+#define 문자열 const char*
+#define 더하기 +
+#define 쌍더하기 ++
+#define 빼기 -
+#define 곱하기 *
+#define 나누기 /
+#define 나머지 %
+#define 은 =
+#define 는 =
+#define 반복하기 while
+#define 시스템 system
+#define 화면지워 "cls"
+#define 정수내용2곱하기정수내용2는정수내용1 "%dX%d=%d\n"
+
+#define 출력 printf
+#define 정수내용1 "%d\n"
+#define 정수내용2 "%d"
+#define 실수내용 "%f\n"
+#define 문자열내용 "%s\n"
+#define 받아쓰기 scanf_s
+#define 자라 Sleep
+#define 만약 if
+#define 좌악어 >
+#define 좌악어는 >=
+#define 우악어는 <=
+#define 우악어 <
+#define 다음줄 \n
+#define 위해 for
+
+
+#define 이로다 ;
+#define 이다 ;
+#define 다 ;
+#define 좌괄호 (
+#define 우괄호 )
+#define 메인 main
+
+정수 메인()
+{
+	정수 구구단수 는 1 이다
+	
+	반복하기 좌괄호 구구단수 우괄호
+	{
+		시스템 좌괄호 화면지워 우괄호 다
+		출력 좌괄호"단을 입력하세요 \n" 우괄호 이다
+		받아쓰기 좌괄호 정수내용2  , &구구단수 우괄호 이다
+
+		만약 좌괄호 구구단수 좌악어는 1 && 구구단수 우악어는 9 우괄호
+		{
+			위해 좌괄호 정수 곱수 는 1 이다 곱수 우악어는 9 이다 곱수 쌍더하기 우괄호
+			{
+				출력 좌괄호 정수내용2곱하기정수내용2는정수내용1, 구구단수, 곱수, 구구단수 곱하기 곱수 우괄호 이다
+			}
+		}
+		
+
+
+		자라 좌괄호 1000 우괄호 이다
+	}
+}
