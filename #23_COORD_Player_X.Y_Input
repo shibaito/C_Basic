@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <Windows.h>
+
+struct Player //구조체 Player 정수값 x,y
+{
+	int x;
+	int y;
+};
+
+void CursorPosition(int x, int y)
+{
+	COORD pos;
+	pos.X = x; //pos라는 COORD값 X는 int x, Y는 int y
+	pos.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+}
+
+int main()
+{
+	Player player;
+	player.x = 40; //플레이어 기본 x값 40
+	player.y = 10; //플레이어 기본 y값 10
+
+	while (true)
+	{
+		system("cls");
+		if (GetAsyncKeyState(VK_LEFT)) //만약 키보드 왼쪽방향키 입력시
+		{
+			player.x--; //좌표 x값 감소
+		}
+		if (GetAsyncKeyState(VK_RIGHT)) // " 우측방향키입력시 좌표x값 증가
+		{
+			player.x++;
+		}
+		if (GetAsyncKeyState(VK_UP))
+		{
+			player.y--;
+		}
+		if(GetAsyncKeyState(VK_DOWN))
+		{
+			player.y++;
+		}
+		CursorPosition(player.x, player.y);
+		printf("★");
+		Sleep(10);
+
+	}
+	return 0;
+}
