@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct Info //구조체 Info
+{
+	int num;
+
+	Info()
+	{
+		printf("생성되었습니다.\n");
+	}
+	Info(int _num)
+	{
+		num = _num;
+		printf("%d 생성되었습니다.\n", num);
+	}
+
+    ~Info() //소멸
+	{
+		printf("%d 소멸되었습니다.\n", num);
+	}
+};
+
+int main()
+{
+	Info info1(1); //구조체 Info에 각각 그냥 숫자매기기
+	Info info2(2);
+	Info info3(3);
+
+	printf("___________________________\n"); //실행시 차례대로 1,2,3실행. 소멸시에는 3,2,1 순서대로 소멸.
+	return 0;
+}
